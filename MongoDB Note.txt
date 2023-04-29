@@ -1,0 +1,30 @@
+> use natours-test
+> db.tours.insertOne({name: "The Forest Hiker", price: 254, rating: 4.7})   
+> db.tours.find()
+> show dbs
+> show collections
+> natours-test> db.tours.insertMany([{name: "The Sea Explorer", price: 485, rating: 4.8}, {name: "The Snow Advanturer", price: 1015, rating: 4.9, difficulty: "easy"}])
+
+
+> db.tours.find({name: "The Sea Explorer"})  
+>  db.tours.find({price: {$lte: 500}})
+> db.tours.find({price: {$lt: 500}, rating: {$gte: 4.8}})
+> db.tours.find({price: {$gt: 900}, difficulty: "easy"})
+> db.tours.find({$or: [{price: {$lt: 1000}}, {rating: {$gt: 4.8}}]})
+> db.tours.find({$or: [{price: {$lt: 500}}, {rating: {$gte: 4.6}}]}, {name: 1})
+
+
+> db.tours.updateOne({name: "The Sea Explorer"}, {$set: {rating: 4.5}})
+> db.tours.find({price: {$gt: 500}, rating: {$gte: 4.8}})
+> db.tours.updateMany({price: {$gt: 500}, rating: {$gte: 4.8}}, {$set: {premium: true}})
+> db.tours.replaceOne({price: {$lte: 300}}, {name: "Forest Hiker", price: 459, rating: 4.89, premium: false})
+
+
+>  db.tours.deleteOne({rating: {$lt: 4.9}})
+> db.tours.deleteMany({})		// Delete all data
+
+
+
+
+user: probir
+pass: iz1ZfPZLQk7DQCa1
