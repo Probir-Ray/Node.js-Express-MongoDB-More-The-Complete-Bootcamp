@@ -1,0 +1,1 @@
+A Promise is a special JavaScript object. It produces a value after an asynchronous (aka, async) operation completes successfully, or an error .
